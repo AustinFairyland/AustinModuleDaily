@@ -40,7 +40,11 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: AGPL-3.0 License"
+        "Natural Language :: English",
+        "Natural Language :: Chinese (Simplified)",
+        "Operating System :: Microsoft :: Windows :: Windows 11",
+        "Topic :: Software Development :: Version Control :: Git",
+        "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)"
     ],
     python_requires=">=3.7",
     
