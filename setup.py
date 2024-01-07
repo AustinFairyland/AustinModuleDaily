@@ -27,16 +27,21 @@ import setuptools
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
-    
+
+release_version = "0.0.4"
+test_version = "0.0.4.0008"
+alpha_version = "0.0.4.0008_alpha02"
+beta_version = "0.0.4.0008_beta02"
+
 setuptools.setup(
     name="austin-module-daily",
-    version="0.0.4.20240107_alpha02",
+    version=release_version,
     author="Austin D",
     author_email="fairylandhost@outlook.com",
     description="Austin personally developed Python library.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com.AustinFairyland/AustinModulesDaily",
+    url="https://github.com/AustinFairyland/AustinModulesDaily",
     packages=setuptools.find_packages(),
     include_package_data=True,
     classifiers=[
@@ -48,5 +53,5 @@ setuptools.setup(
         "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)"
     ],
     python_requires=">=3.7",
-    
+
 )

@@ -1,0 +1,9 @@
+#!/bin/bash
+# File: build_package
+# Editor: PyCharm
+# Author: Austin (From Chengdu.China) https://fairy.host
+# HomePage: https://github.com/AustinFairyland
+# OS: Linux Ubuntu 22.04.4 Kernel 6.2.0-36-generic 
+# CreatedTime: 2024/1/7
+
+python setup.py sdist bdist_wheel
