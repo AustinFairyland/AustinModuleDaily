@@ -29,8 +29,8 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
     
 setuptools.setup(
-    name="austin_module_daily",
-    version="0.0.1",
+    name="austin-module-daily",
+    version="0.0.4.20240107_alpha02",
     author="Austin D",
     author_email="fairylandhost@outlook.com",
     description="Austin personally developed Python library.",
@@ -38,6 +38,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com.AustinFairyland/AustinModulesDaily",
     packages=setuptools.find_packages(),
+    include_package_data=True,
     classifiers=[
         "Programming Language :: Python :: 3",
         "Natural Language :: English",
