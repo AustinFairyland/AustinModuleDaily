@@ -25,8 +25,10 @@ import random
 
 from tools import PublicToolsBaseClass
 from tools import DateTimeClass
+import setuptools
 
 if __name__ == '__main__':
-    print(PublicToolsBaseClass.obtain_root_path())
-    print(DateTimeClass.normtimestamp())
-    print(DateTimeClass.normdatetime())
+    # print(PublicToolsBaseClass.obtain_root_path())
+    # print(DateTimeClass.normtimestamp())
+    # print(DateTimeClass.normdatetime())
+    print(setuptools.find_packages())

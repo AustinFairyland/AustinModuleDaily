@@ -23,9 +23,11 @@ if platform.system() == 'Windows':
 import time
 import random
 
-from tools.public import PublicToolsBaseClass
-from tools.public import DateTimeClass
-from tools.public import ParamsError
+name = "austin_module_daily_tools"
+
+from .public import PublicToolsBaseClass
+from .public import DateTimeClass
+from .public import ParamsError
 
 __all__ = [
     "PublicToolsBaseClass",
