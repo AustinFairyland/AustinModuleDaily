@@ -20,12 +20,6 @@ warnings.filterwarnings("ignore")
 if platform.system() == "Windows":
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
-import time
-import random
-
-import pandas
-
-
 import setuptools
 from datetime import datetime
 
@@ -58,8 +52,8 @@ beta_version = ".".join((release_version, "".join(("beta", revise_after))))
 
 setuptools.setup(
     name=name,
-    fullname= "".join((name, release_version)),
-    version=release_version,
+    fullname="".join((name, release_version)),
+    version=alpha_version,
     author="Austin D",
     author_email="fairylandhost@outlook.com",
     description="Austin personally developed Python library.",
