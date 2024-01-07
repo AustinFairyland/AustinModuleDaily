@@ -24,6 +24,28 @@ import time
 import random
 
 import setuptools
+from datetime import datetime
 
 if __name__ == '__main__':
     print(setuptools.find_packages())
+    major_number = 0
+    subversion_number = 0
+    stage_number = 4
+    date_number = datetime.now().date().__str__().replace("-", "")
+    revise_number = 10
+    if revise_number.__str__().__len__() < 5:
+        nbit = 5 - revise_number.__str__().__len__()
+        revise_number = "".join((("0" * nbit), revise_number.__str__()))
+    else:
+        revise_number = revise_number.__str__()
+    release_version = ".".join((major_number.__str__(), subversion_number.__str__(), stage_number.__str__()))
+    revise_version = ".".join((release_version, revise_number))
+    test_version = "_".join((revise_version, "test01"))
+    alpha_version = "_".join((revise_version, "alpha02"))
+    beta_version = "_".join((revise_version, "beta01"))
+
+    print(release_version)
+    print(revise_version)
+    print(test_version)
+    print(alpha_version)
+    print(beta_version)

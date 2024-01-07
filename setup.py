@@ -23,25 +23,38 @@ if platform.system() == "Windows":
 import time
 import random
 
+
 import setuptools
+from datetime import datetime
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
-release_version = "0.0.4"
-test_version = "0.0.4.0008"
-alpha_version = "0.0.4.0008_alpha02"
-beta_version = "0.0.4.0008_beta02"
+major_number = 0
+subversion_number = 0
+stage_number = 4
+revise_number = 10
+date_number = datetime.now().date().__str__().replace("-", "")
+if revise_number.__str__().__len__() < 5:
+    nbit = 5 - revise_number.__str__().__len__()
+    revise_number = "".join((("0" * nbit), revise_number.__str__()))
+else:
+    revise_number = revise_number.__str__()
+release_version = ".".join((major_number.__str__(), subversion_number.__str__(), stage_number.__str__()))
+revise_version = ".".join((release_version, revise_number))
+test_version = "_".join((revise_version, "test01"))
+alpha_version = "_".join((revise_version, "alpha02"))
+beta_version = "_".join((revise_version, "beta01"))
 
 setuptools.setup(
     name="austin-module-daily",
-    version=release_version,
+    version=revise_version,
     author="Austin D",
     author_email="fairylandhost@outlook.com",
     description="Austin personally developed Python library.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/AustinFairyland/AustinModulesDaily",
+    url="https://github.com/AustinFairyland/AustinModuleDaily",
     packages=setuptools.find_packages(),
     include_package_data=True,
     classifiers=[

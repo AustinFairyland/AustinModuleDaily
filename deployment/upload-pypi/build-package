@@ -6,4 +6,6 @@
 # OS: Linux Ubuntu 22.04.4 Kernel 6.2.0-36-generic 
 # CreatedTime: 2024/1/7
 
+pip install setuptools wheel
+pip install --upgrade setuptools wheel
 python setup.py sdist bdist_wheel
