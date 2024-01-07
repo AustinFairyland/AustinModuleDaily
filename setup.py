@@ -27,28 +27,37 @@ import random
 import setuptools
 from datetime import datetime
 
+# package name
+name = "austin-module-daily"
+
+# version
+major_number = 0
+sub_number = 0
+stage_number = 5
+revise_number = 12
+
+# leng desctiption
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
-major_number = 0
-subversion_number = 0
-stage_number = 4
-revise_number = 10
-date_number = datetime.now().date().__str__().replace("-", "")
 if revise_number.__str__().__len__() < 5:
     nbit = 5 - revise_number.__str__().__len__()
     revise_number = "".join((("0" * nbit), revise_number.__str__()))
 else:
     revise_number = revise_number.__str__()
-release_version = ".".join((major_number.__str__(), subversion_number.__str__(), stage_number.__str__()))
-revise_version = ".".join((release_version, revise_number))
-test_version = "_".join((revise_version, "test01"))
-alpha_version = "_".join((revise_version, "alpha02"))
-beta_version = "_".join((revise_version, "beta01"))
+date_number = datetime.now().date().__str__().replace("-", "")
+revise_after = "-".join((revise_number.__str__(), date_number))
+
+# version: (release_version, test_version, alpha_version, beta_version)
+release_version = ".".join((major_number.__str__(), sub_number.__str__(), stage_number.__str__()))
+test_version = ".".join((release_version, "".join(("rc", revise_after))))
+alpha_version = ".".join((release_version, "".join(("alpha", revise_after))))
+beta_version = ".".join((release_version, "".join(("beta", revise_after))))
 
 setuptools.setup(
-    name="austin-module-daily",
-    version=revise_version,
+    name=name,
+    fullname= "".join((name, release_version)),
+    version=release_version,
     author="Austin D",
     author_email="fairylandhost@outlook.com",
     description="Austin personally developed Python library.",

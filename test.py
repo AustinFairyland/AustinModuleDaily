@@ -30,19 +30,19 @@ if __name__ == '__main__':
     print(setuptools.find_packages())
     major_number = 0
     subversion_number = 0
-    stage_number = 4
-    date_number = datetime.now().date().__str__().replace("-", "")
+    stage_number = 5
     revise_number = 10
     if revise_number.__str__().__len__() < 5:
         nbit = 5 - revise_number.__str__().__len__()
         revise_number = "".join((("0" * nbit), revise_number.__str__()))
     else:
         revise_number = revise_number.__str__()
+    date_number = datetime.now().date().__str__().replace("-", "")
     release_version = ".".join((major_number.__str__(), subversion_number.__str__(), stage_number.__str__()))
-    revise_version = ".".join((release_version, revise_number))
-    test_version = "_".join((revise_version, "test01"))
-    alpha_version = "_".join((revise_version, "alpha02"))
-    beta_version = "_".join((revise_version, "beta01"))
+    revise_version = ".".join((revise_number.__str__(), date_number))
+    test_version = ".".join((release_version, "".join(("rc", revise_version))))
+    alpha_version = ".".join((release_version, "".join(("alpha", revise_version))))
+    beta_version = ".".join((release_version, "".join(("beta", revise_version))))
 
     print(release_version)
     print(revise_version)
