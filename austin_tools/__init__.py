@@ -23,7 +23,7 @@ if platform.system() == 'Windows':
 import time
 import random
 
-name = "austin_module_daily_tools"
+name = "austin_tools"
 
 from .public import PublicToolsBaseClass
 from .public import DateTimeClass

@@ -23,6 +23,8 @@ if platform.system() == "Windows":
 import time
 import random
 
+import pandas
+
 
 import setuptools
 from datetime import datetime
@@ -33,8 +35,8 @@ name = "austin-module-daily"
 # version
 major_number = 0
 sub_number = 0
-stage_number = 5
-revise_number = 8
+stage_number = 6
+revise_number = 9
 
 # leng desctiption
 with open("README.md", "r", encoding="utf-8") as fh:
@@ -57,7 +59,7 @@ beta_version = ".".join((release_version, "".join(("beta", revise_after))))
 setuptools.setup(
     name=name,
     fullname= "".join((name, release_version)),
-    version=alpha_version,
+    version=release_version,
     author="Austin D",
     author_email="fairylandhost@outlook.com",
     description="Austin personally developed Python library.",
