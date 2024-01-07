@@ -1,5 +1,6 @@
-.idea
-.git
-dist
-build
+.idea/
+.git/
+dist/
+build/
 *.egg*
+deployment/upload-pypi/config/.pypirc
