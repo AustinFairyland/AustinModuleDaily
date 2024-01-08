@@ -29,8 +29,8 @@ name = "austin-module-daily"
 # version
 major_number = 0
 sub_number = 0
-stage_number = 6
-revise_number = 11
+stage_number = 7
+revise_number = 13
 
 # leng desctiption
 with open("README.md", "r", encoding="utf-8") as fh:
