@@ -1,4 +1,4 @@
-# AustinModuleDaily
+# AustinFairylandRepository
 
 > @File: README.md  
 > @Editor: PyCharm  
@@ -48,4 +48,44 @@ Development Environment
 
 ---
 
-# Daily tools
+[English](README.md) | [简体中文]()
+
+# Quick Start
+
+PyPI: [Link](https://pypi.org/project/PyFairyland/) ·
+TestPyPI: [Link](https://test.pypi.org/project/PyFairyland/)
+
+```shell
+pip install PyFairyland
+```
+
+# Document
+
+Tips: Wait fill up
+
+# Further Information
+
+Tips: Wait fill up
+
+# Getting Support
+
+Tips: Wait fill up
+
+# Contributors
+
+Tips: Wait fill up
+
+# License
+
+The `austin-module-daily` module was written by Austin. Personal maintained.
+
+`austin-module-daily` is released under the AGPLv3+ license.
+
+See the file LICENSE for more details.
+
+---
+
+[@HomePage](https://fairy.host) ·
+[@Github](https://github.com/AustinFairyland) ·
+[@TelegramGroup]()
+

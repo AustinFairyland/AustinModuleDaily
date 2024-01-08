@@ -34,13 +34,6 @@ class PublicToolsBaseClass:
         return self.__root_path
 
     @staticmethod
-    def obtain_root_path():
-        results = os.path.abspath(
-            os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-        )
-        return results
-
-    @staticmethod
     def api_results():
         results = {"status": "failure", "code": 500, "data": None}
         return results
