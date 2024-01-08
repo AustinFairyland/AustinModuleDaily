@@ -18,8 +18,14 @@ sys.dont_write_bytecode = True
 warnings.filterwarnings("ignore")
 if platform.system() == "Windows":
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
-    
+
 __name__ = "austin-core"
 __version__ = "0.0.1"
 
+from .core.Base import Base
+from .core.DefaultData import DefaultData
 
+__all__ = [
+    "Base",
+    "DefaultData",
+]

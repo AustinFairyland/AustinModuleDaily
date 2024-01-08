@@ -16,8 +16,8 @@ import platform
 import asyncio
 
 sys.dont_write_bytecode = True
-warnings.filterwarnings('ignore')
-if platform.system() == 'Windows':
+warnings.filterwarnings("ignore")
+if platform.system() == "Windows":
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
 import time
@@ -26,7 +26,7 @@ import random
 import setuptools
 from datetime import datetime
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print(setuptools.find_packages())
     major_number = 0
     subversion_number = 0
@@ -38,7 +38,9 @@ if __name__ == '__main__':
     else:
         revise_number = revise_number.__str__()
     date_number = datetime.now().date().__str__().replace("-", "")
-    release_version = ".".join((major_number.__str__(), subversion_number.__str__(), stage_number.__str__()))
+    release_version = ".".join(
+        (major_number.__str__(), subversion_number.__str__(), stage_number.__str__())
+    )
     revise_version = ".".join((revise_number.__str__(), date_number))
     test_version = ".".join((release_version, "".join(("rc", revise_version))))
     alpha_version = ".".join((release_version, "".join(("alpha", revise_version))))
@@ -49,3 +51,10 @@ if __name__ == '__main__':
     print(test_version)
     print(alpha_version)
     print(beta_version)
+
+    print(float())
+    print(None, type(None))
+
+    print(bytes())
+    print(bytearray())
+    print(complex())
