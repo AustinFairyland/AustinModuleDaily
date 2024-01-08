@@ -30,7 +30,7 @@ name = "austin-module-daily"
 major_number = 0
 sub_number = 0
 stage_number = 6
-revise_number = 9
+revise_number = 10
 
 # leng desctiption
 with open("README.md", "r", encoding="utf-8") as fh:
@@ -53,7 +53,7 @@ beta_version = ".".join((release_version, "".join(("beta", revise_after))))
 setuptools.setup(
     name=name,
     fullname="".join((name, release_version)),
-    version=alpha_version,
+    version=test_version,
     author="Austin D",
     author_email="fairylandhost@outlook.com",
     description="Austin personally developed Python library.",
