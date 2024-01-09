@@ -23,13 +23,12 @@ import os
 
 
 class Base:
-
     def __init__(self, project_home, *args, **kwargs):
         self.check_parameters(project_home)
         self.__project_home = project_home
 
     def check_parameters(self, project_home):
-        if isinstance(project_home, str):
+        if not isinstance(project_home, str):
             raise TypeError("Project home path must be a str.")
         if not os.path.isdir(project_home):
             raise ValueError("Project home path does not exist.")
