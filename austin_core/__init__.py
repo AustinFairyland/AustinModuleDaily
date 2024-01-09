@@ -22,14 +22,10 @@ if platform.system() == "Windows":
 __name__ = "austin-core"
 __version__ = "0.0.1"
 
-from .core import Base
-from .core import DefaultData
-from .core import DateTime
+from . import core
 
 __all__ = [
     "__name__",
     "__version__",
-    "Base",
-    "DefaultData",
-    "DateTime",
+    "core",
 ]
