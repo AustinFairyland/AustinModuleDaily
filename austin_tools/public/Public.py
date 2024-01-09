@@ -1,6 +1,6 @@
 # coding: utf8
 """ 
-@ File: public.py
+@ File: Public.py
 @ Editor: PyCharm
 @ Author: Austin (From Chengdu.China) https://fairy.host
 @ HomePage: https://github.com/AustinFairyland
@@ -32,4 +32,3 @@ class PublicToolsBaseClass:
     @property
     def root_path(self) -> str:
         return self.__root_path
-
