@@ -26,10 +26,10 @@ from datetime import datetime
 import time
 import re
 
-from .exceptional import ParamsError
+from austin_error.abnormal import ParamsError
 
 
-class DateTimeClass:
+class DateTime:
     @staticmethod
     def normtimestamp():
         """
