@@ -23,15 +23,18 @@ import os
 
 
 class Base:
-    def __init__(self, project_home, *args, **kwargs):
-        self.check_parameters(project_home)
+    def __init__(self, project_home: str | None = None):
+        __dict_data = {"project_home": project_home}
+        self.__check_parameters(**__dict_data)
         self.__project_home = project_home
 
-    def check_parameters(self, project_home):
-        if not isinstance(project_home, str):
-            raise TypeError("Project home path must be a str.")
-        if not os.path.isdir(project_home):
-            raise ValueError("Project home path does not exist.")
+    def __check_parameters(self, **kwargs):
+        project_home = kwargs.get("project_home")
+        if project_home:
+            if not isinstance(project_home, str):
+                raise TypeError("Project home path must be a str.")
+            if not os.path.isdir(project_home):
+                raise ValueError("Project home path does not exist.")
 
     @property
     def project_home(self):
@@ -39,5 +42,5 @@ class Base:
 
     @project_home.setter
     def project_home(self, value):
-        self.check_parameters(project_home=value)
+        self.__check_parameters(project_home=value)
         self.__project_home = value

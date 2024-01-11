@@ -19,7 +19,7 @@ warnings.filterwarnings("ignore")
 if platform.system() == "Windows":
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
-__name__ = "austin-core"
+__name__ = "austin_core"
 __version__ = "0.0.1"
 
 from . import core
